@@ -1,0 +1,19 @@
+{
+  "name": "@gcommands/events",
+  "version": "1.0.4",
+  "description": "Event handler for gcommands",
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/garlic-team/gevents.git"
+  },
+  "author": "Garlic-Team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Garlic-Team/GEvents/issues"
+  },
+  "homepage": "https://gcommands.js.org",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
