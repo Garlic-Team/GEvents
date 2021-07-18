@@ -32,7 +32,7 @@ class GEventLoader {
 
                     file = await require(`../../../../../${this.eventDir}${dir}`);
                     if (isClass(file)) {
-                        finalFile = new file(this.client)
+                        finalFile = await new file(this.client)
                         if(!(finalFile instanceof Event)) return console.log(new Color(`&d[GEvents] &cEvent ${fileName} doesnt belong in Events.`).getText())
                     } else finalFile = file;
 
@@ -51,7 +51,7 @@ class GEventLoader {
 
                         file2 = await require(`../../../../../${this.eventDir}${dir}/${eventFile}`);
                         if (isClass(file)) {
-                            finalFile2 = new file2(this.client)
+                            finalFile2 = await new file2(this.client)
                             if(!(finalFile2 instanceof Event)) return console.log(new Color(`&d[GEvents] &cEvent ${fileName2} doesnt belong in Events.`).getText());
                         } else finalFile2 = file2;
 
