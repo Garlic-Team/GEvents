@@ -22,7 +22,7 @@ class GEventLoader {
     }
 
     async __loadEventFiles() {
-        await fs.readdirSync(`${__dirname}/../../../../../${this.eventDir}`).forEach(async(dir) => {
+        for(let dir of (await fs.readdirSync(`${__dirname}/../../../../../${this.eventDir}`))) {
             let file;
             let fileName = dir.split('.').reverse()[1]
             let fileType = dir.split('.').reverse()[0]
@@ -43,7 +43,7 @@ class GEventLoader {
                     this.GCommandsClient.emit(Events.LOG, new Color('&d[GEvents] &cCan\'t load ' + fileName).getText());
                 }
             } else {
-                fs.readdirSync(`${this.eventDir}${dir}`).forEach(async(eventFile) => {
+                for(let eventFile of (await fs.readdirSync(`${this.eventDir}${dir}`))) {
                     let file2;
                     let fileName2 = eventFile.split('.').reverse()[1];
                     try {
@@ -61,9 +61,9 @@ class GEventLoader {
                         this.GCommandsClient.emit(Events.DEBUG, new Color('&d[GEvents Debug] '+e).getText());
                         this.GCommandsClient.emit(Events.LOG, new Color('&d[GEvents] &cCan\'t load ' + fileName2).getText());
                     }
-                })
+                }
             }
-        })
+        }
 
         await this.__loadEvents()
     }
