@@ -73,11 +73,11 @@ class GEventLoader {
             if(event.name == 'ready') return event.run(this.client);
 
             if(event.ws) {
-                if(event.once) this.client.ws.once(event.name, (...args) => event.run(this.client, ...args));
-                else this.client.ws.on(event.name, (...args) => event.run(this.client, ...args));
+                if(event.once) this.client.ws.once(event.name, (...args) => event.execute(this.client, ...args));
+                else this.client.ws.on(event.name, (...args) => event.execute(this.client, ...args));
             } else {
-                if(event.once) this.client.once(event.name, (...args) => event.run(this.client, ...args));
-                else this.client.on(event.name, (...args) => event.run(this.client, ...args));
+                if(event.once) this.client.once(event.name, (...args) => event.execute(this.client, ...args));
+                else this.client.on(event.name, (...args) => event.execute(this.client, ...args));
             }
         })
     }
