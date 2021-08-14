@@ -36,6 +36,7 @@ class GEventLoader {
                         if(!(finalFile instanceof Event)) return console.log(new Color(`&d[GEvents] &cEvent ${fileName} doesnt belong in Events.`).getText())
                     } else finalFile = file;
 
+                    finalFile._path = `../../../../${this.eventDir}/${fileName}.${fileType}`;
                     this.client.gevents.set(finalFile.name, finalFile);
                     this.GCommandsClient.emit(Events.LOG, new Color('&d[GEvents] &aLoaded (File): &e➜   &3' + fileName, {json:false}).getText());
                 } catch(e) {
@@ -46,6 +47,7 @@ class GEventLoader {
                 for(let eventFile of (await fs.readdirSync(`${this.eventDir}${dir}`))) {
                     let file2;
                     let fileName2 = eventFile.split('.').reverse()[1];
+                    let fileType2 = eventFile.split('.').reverse()[1];
                     try {
                         let finalFile2;
 
@@ -55,6 +57,7 @@ class GEventLoader {
                             if(!(finalFile2 instanceof Event)) return console.log(new Color(`&d[GEvents] &cEvent ${fileName2} doesnt belong in Events.`).getText());
                         } else finalFile2 = file2;
 
+                        finalFile2._path = `../../../../${this.eventDir}${dir}/${fileName2}.${fileType2}`;
                         this.client.gevents.set(finalFile2.name, finalFile2);
                         this.GCommandsClient.emit(Events.LOG, new Color('&d[GEvents] &aLoaded (File): &e➜   &3' + fileName2, {json:false}).getText());
                     } catch(e) {
