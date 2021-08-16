@@ -22,3 +22,18 @@ npm install @gcommands/events
 yarn add @gcommands/events
 pnpm add @gcommands/events
 ```
+
+```js
+const { GEvents } = require("@gcommands/events");
+const { Client } = require("discord.js");
+const { join } = require("path");
+const client = new Client();
+
+client.on("ready", () => {
+    new GEvents(client, {
+        eventDir: join(__dirname, "events")
+    })
+}) 
+
+client.login("token")
+```

@@ -1,6 +1,6 @@
 {
   "name": "@gcommands/events",
-  "version": "1.0.9",
+  "version": "2.0.0",
   "description": "Event handler for gcommands",
   "main": "src/index.js",
   "repository": {
