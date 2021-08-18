@@ -6,6 +6,8 @@ class Event {
         this.name = resolveString(options.name);
         this.once = Boolean(options.once) || false;
         this.ws = Boolean(options.ws) || false;
+
+        this._options = options;
     }
 
     async run(client, ...args) {
