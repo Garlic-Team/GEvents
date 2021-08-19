@@ -47,12 +47,12 @@ class GEventLoader {
                 for(let eventFile of (await fs.readdirSync(`${this.eventDir}/${dir}`))) {
                     let file2;
                     let fileName2 = eventFile.split('.').reverse()[1];
-                    let fileType2 = eventFile.split('.').reverse()[1];
+                    let fileType2 = eventFile.split('.').reverse()[0];
                     try {
                         let finalFile2;
 
                         file2 = await require(`${this.eventDir}/${dir}/${eventFile}`);
-                        if (isClass(file)) {
+                        if (isClass(file2)) {
                             finalFile2 = await new file2(this.client)
                             if(!(finalFile2 instanceof Event)) return console.log(new Color(`&d[GEvents] &cEvent ${fileName2} doesnt belong in Events.`).getText());
                         } else finalFile2 = file2;
