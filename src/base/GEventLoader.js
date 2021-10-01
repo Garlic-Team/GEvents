@@ -3,6 +3,7 @@ const Color = require('../structures/Color'), { Events } = require('../util/Cons
 const fs = require('fs');
 const Event = require('../structures/Event');
 const { isClass } = require('../util/util');
+const path = require('path');
 
 class GEventLoader {
     constructor(GCommandsClient, options = {}) {
@@ -22,53 +23,53 @@ class GEventLoader {
     }
 
     async __loadEventFiles() {
-        for(let dir of (await fs.readdirSync(`${this.eventDir}`))) {
-            let file;
-            let fileName = dir.split('.').reverse()[1]
-            let fileType = dir.split('.').reverse()[0]
-            if(fileType == 'js' || fileType == 'ts') {
-                try {
-                    let finalFile;
+        for await(let fsDirent of fs.readdirSync(this.eventDir, { withFileTypes: true })) {
+            let file = fsDirent.name;
+            const fileType = path.extname(file);
+            const fileName = path.basename(file, fileType);
 
-                    file = await require(`${this.eventDir}/${dir}`);
-                    if (isClass(file)) {
-                        finalFile = await new file(this.client)
-                        if(!(finalFile instanceof Event)) return console.log(new Color(`&d[GEvents] &cEvent ${fileName} doesnt belong in Events.`).getText())
-                    } else finalFile = file;
+            if (fsDirent.isDirectory()) {
+                await this.__loadEventCategoryFiles(file);
+                continue;
+            } else if (!['.js', '.ts'].includes(fileType)) { continue; }
 
-                    finalFile._path = `${this.eventDir}/${fileName}.${fileType}`;
-                    this.client.gevents.set(finalFile.name, finalFile);
-                    this.GCommandsClient.emit(Events.LOG, new Color('&d[GEvents] &aLoaded (File): &e➜   &3' + fileName, {json:false}).getText());
-                } catch(e) {
-                    this.GCommandsClient.emit(Events.DEBUG, new Color('&d[GEvents Debug] '+e).getText());
-                    this.GCommandsClient.emit(Events.LOG, new Color('&d[GEvents] &cCan\'t load ' + fileName).getText());
-                }
-            } else {
-                for(let eventFile of (await fs.readdirSync(`${this.eventDir}/${dir}`))) {
-                    let file2;
-                    let fileName2 = eventFile.split('.').reverse()[1];
-                    let fileType2 = eventFile.split('.').reverse()[0];
-                    try {
-                        let finalFile2;
-
-                        file2 = await require(`${this.eventDir}/${dir}/${eventFile}`);
-                        if (isClass(file2)) {
-                            finalFile2 = await new file2(this.client)
-                            if(!(finalFile2 instanceof Event)) return console.log(new Color(`&d[GEvents] &cEvent ${fileName2} doesnt belong in Events.`).getText());
-                        } else finalFile2 = file2;
-
-                        finalFile2._path = `${this.eventDir}/${dir}/${fileName2}.${fileType2}`;
-                        this.client.gevents.set(finalFile2.name, finalFile2);
-                        this.GCommandsClient.emit(Events.LOG, new Color('&d[GEvents] &aLoaded (File): &e➜   &3' + fileName2, {json:false}).getText());
-                    } catch(e) {
-                        this.GCommandsClient.emit(Events.DEBUG, new Color('&d[GEvents Debug] '+e).getText());
-                        this.GCommandsClient.emit(Events.LOG, new Color('&d[GEvents] &cCan\'t load ' + fileName2).getText());
-                    }
-                }
+            file = require(`${this.eventDir}/${file}`);
+            if (isClass(file)) {
+                file = new file(this.client);
+                if (!(file instanceof Event)) return console.log(new Color(`&d[GEvents] &cEvent ${fileName} doesnt belong in Events.`).getText());
             }
+
+            file._path = `${this.eventDir}/${fileName}${fileType}`;
+
+            this.client.gevents.set(fileName, file);
+            this.GCommandsClient.emit(Events.LOG, new Color('&d[GEvents] &aLoaded (File): &e➜   &3' + fileName, {json:false}).getText());
         }
 
         await this.__loadEvents()
+    }
+
+    async __loadEventCategoryFiles(categoryFolder) {
+        for await (let fsDirent of fs.readdirSync(`${this.eventDir}/${categoryFolder}`, { withFileTypes: true })) {
+            let file = fsDirent.name;
+            const fileType = path.extname(file);
+            const fileName = path.basename(file, fileType);
+
+            if (fsDirent.isDirectory()) {
+                await this.__loadEventCategoryFiles(`${categoryFolder}/${file}`);
+                continue;
+            } else if (!['.js', '.ts'].includes(fileType)) { continue; }
+
+            file = require(`${this.eventDir}/${categoryFolder}/${file}`);
+            if (isClass(file)) {
+                file = new file(this.client);
+                if (!(file instanceof Event)) return console.log(new Color(`&d[GEvents] &cEvent ${fileName} doesnt belong in Events.`).getText());
+            }
+
+            file._path = `${this.eventDir}/${categoryFolder}/${fileName}.${fileType}`;
+
+            this.client.gevents.set(fileName, file);
+            this.GCommandsClient.emit(Events.LOG, new Color('&d[GEvents] &aLoaded (File): &e➜   &3' + fileName, {json:false}).getText());
+        }
     }
 
     async __loadEvents() {
