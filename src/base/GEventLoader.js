@@ -38,7 +38,7 @@ class GEventLoader {
             file._path = `${this.eventDir}/${fileName}${fileType}`;
 
             this.client.gevents.set(fileName, file);
-            this.Gclient.emit(Events.LOG, new Color('&d[GEvents] &aLoaded (File): &e➜   &3' + fileName, {json:false}).getText());
+            this.client.emit(Events.LOG, new Color('&d[GEvents] &aLoaded (File): &e➜   &3' + fileName, {json:false}).getText());
         }
 
         await this.__loadEvents()
