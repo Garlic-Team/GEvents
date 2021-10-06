@@ -5,16 +5,12 @@ const Event = require('../structures/Event');
 const { isClass } = require('../util/util');
 
 class GEventLoader {
-    constructor(GCommandsClient, options = {}) {
-        if(!GCommandsClient.client) { 
-            GCommandsClient = { client: GCommandsClient }
-            GCommandsClient.emit = (event, data) => console.log(data)
-        }
-        if (typeof GCommandsClient.client !== 'object') return console.log(new Color('&d[GEvents] &cNo discord.js client provided!',{json:false}).getText());
+    constructor(client, options = {}) {
+        if (typeof client !== 'object') return console.log(new Color('&d[GEvents] &cNo discord.js client provided!',{json:false}).getText());
 
-        this.GCommandsClient = GCommandsClient;
-        this.eventDir = this.GCommandsClient.eventDir ? this.GCommandsClient.eventDir : options.eventDir;
-        this.client = GCommandsClient.client;
+        this.client = client;
+
+        this.eventDir = this.client.eventDir ? this.client.eventDir : options.eventDir;
         this.client.gevents = new Collection();
 
         if(!this.eventDir) return;
@@ -38,10 +34,10 @@ class GEventLoader {
 
                     finalFile._path = `${this.eventDir}/${fileName}.${fileType}`;
                     this.client.gevents.set(finalFile.name, finalFile);
-                    this.GCommandsClient.emit(Events.LOG, new Color('&d[GEvents] &aLoaded (File): &e➜   &3' + fileName, {json:false}).getText());
+                    this.client.emit(Events.LOG, new Color('&d[GEvents] &aLoaded (File): &e➜   &3' + fileName, {json:false}).getText());
                 } catch(e) {
-                    this.GCommandsClient.emit(Events.DEBUG, new Color('&d[GEvents Debug] '+e).getText());
-                    this.GCommandsClient.emit(Events.LOG, new Color('&d[GEvents] &cCan\'t load ' + fileName).getText());
+                    this.client.emit(Events.DEBUG, new Color('&d[GEvents Debug] '+e).getText());
+                    this.client.emit(Events.LOG, new Color('&d[GEvents] &cCan\'t load ' + fileName).getText());
                 }
             } else {
                 for(let eventFile of (await fs.readdirSync(`${this.eventDir}/${dir}`))) {
@@ -59,10 +55,10 @@ class GEventLoader {
 
                         finalFile2._path = `${this.eventDir}/${dir}/${fileName2}.${fileType2}`;
                         this.client.gevents.set(finalFile2.name, finalFile2);
-                        this.GCommandsClient.emit(Events.LOG, new Color('&d[GEvents] &aLoaded (File): &e➜   &3' + fileName2, {json:false}).getText());
+                        this.client.emit(Events.LOG, new Color('&d[GEvents] &aLoaded (File): &e➜   &3' + fileName2, {json:false}).getText());
                     } catch(e) {
-                        this.GCommandsClient.emit(Events.DEBUG, new Color('&d[GEvents Debug] '+e).getText());
-                        this.GCommandsClient.emit(Events.LOG, new Color('&d[GEvents] &cCan\'t load ' + fileName2).getText());
+                        this.client.emit(Events.DEBUG, new Color('&d[GEvents Debug] '+e).getText());
+                        this.client.emit(Events.LOG, new Color('&d[GEvents] &cCan\'t load ' + fileName2).getText());
                     }
                 }
             }
