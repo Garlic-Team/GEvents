@@ -17,6 +17,20 @@ declare module '@gcommands/events' {
         public run(client: Client, ...args): void;
     }
 
+    export class EventOptionsBuilder {
+        constructor(data: EventOptions);
+        private setup(data: EventOptions);
+    
+        public name: String;
+        public once: Boolean;
+        public ws: Boolean;
+    
+        public setName(): EventOptionsBuilder;
+        public setOnce(): EventOptionsBuilder;
+        public setWs(): EventOptionsBuilder;
+        public toJSON(): EventOptionsBuilder;
+      }
+
     interface EventOptions {
         name: string;
         once: boolean;
