@@ -1,9 +1,9 @@
 import { Collection } from 'discord.js';
 import Color from '../structures/Color'
-import fs from 'fs';
+import * as fs from "fs";
 import Event from '../structures/Event';
 import Util from '../util/util';
-import path from 'path';
+import * as path from 'path';
 import { LoaderOptions, Events } from '../util/Constants'
 
 class GEventLoader {

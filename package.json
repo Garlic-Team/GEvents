@@ -22,7 +22,7 @@
     "@babel/core": "^7.15.8",
     "@babel/preset-env": "^7.15.8",
     "@babel/preset-typescript": "^7.15.0",
-    "@types/node": "^16.10.3",
+    "@types/node": "^16.11.10",
     "babel-cli": "^6.26.0",
     "babel-plugin-add-module-exports": "^1.0.4",
     "typescript": "^4.4.3"

@@ -12,7 +12,7 @@ class Event {
     name: string;
     once: boolean;
     ws: boolean;
-    #options;
+    options;
 
     constructor(client, options: EventOptions) {
         this.client = client;
@@ -21,7 +21,7 @@ class Event {
         this.once = Boolean(options.once) || false;
         this.ws = Boolean(options.ws) || false;
 
-        this.#options = options;
+        this.options = options;
     }
 
     async run(client, ...args) {
