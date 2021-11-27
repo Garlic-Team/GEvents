@@ -37,14 +37,14 @@ class GEventLoader {
 
             let fileClass;
             fileClass = require(`${this.eventDir}/${file}`);
-            if (Util.isClass(file)) {
-                file = new fileClass(this.client);
+            if (Util.isClass(fileClass)) {
+                fileClass = new fileClass(this.client);
                 if (!(fileClass instanceof Event)) return console.log(new Color(`&d[GEvents] &cEvent ${fileName} doesnt belong in Events.`).getText());
             }
 
-            file['_path'] = `${this.eventDir}/${fileName}${fileType}`;
+            fileClass['_path'] = `${this.eventDir}/${fileName}${fileType}`;
 
-            this.client.gevents.set(fileName, file);
+            this.client.gevents.set(fileName, fileClass);
             this.client.emit(Events.LOG, new Color('&d[GEvents] &aLoaded (File): &e➜   &3' + fileName, {json:false}).getText());
         }
 
@@ -64,14 +64,14 @@ class GEventLoader {
 
             let fileClass;
             fileClass = require(`${this.eventDir}/${categoryFolder}/${file}`);
-            if (Util.isClass(file)) {
-                file = new fileClass(this.client);
+            if (Util.isClass(fileClass)) {
+                fileClass = new fileClass(this.client);
                 if (!(fileClass instanceof Event)) return console.log(new Color(`&d[GEvents] &cEvent ${fileName} doesnt belong in Events.`).getText());
             }
 
-            file['_path'] = `${this.eventDir}/${categoryFolder}/${fileName}.${fileType}`;
+            fileClass['_path'] = `${this.eventDir}/${categoryFolder}/${fileName}.${fileType}`;
 
-            this.client.gevents.set(fileName, file);
+            this.client.gevents.set(fileName, fileClass);
             this.client.emit(Events.LOG, new Color('&d[GEvents] &aLoaded (File): &e➜   &3' + fileName, {json:false}).getText());
         }
     }
