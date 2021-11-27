@@ -1,7 +1,9 @@
 const { resolveString } = require('../util/util');
 
 class EventOptionsBuilder {
-    
+    name: string;
+    once: boolean;
+    ws: boolean;
     constructor(data = {}) {
         this.setup(data);
     }
@@ -36,7 +38,7 @@ class EventOptionsBuilder {
           once: this.once,
           ws: this.ws,
         };
-      }
+    }
 }
 
-module.exports = EventOptionsBuilder;
+export default EventOptionsBuilder;
