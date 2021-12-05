@@ -3,7 +3,7 @@
   <p>
     <a href="https://www.npmjs.com/package/@gcommands/events"><img src="https://img.shields.io/npm/v/@gcommands/events?maxAge=3600" alt="NPM version" /></a>
     <a href="https://www.npmjs.com/package/@gcommands/events"><img src="https://img.shields.io/npm/dt/@gcommands/events?maxAge=3600" alt="NPM downloads" /></a>
-    <a href="https://www.codefactor.io/repository/github/garlic-team/@gcommands/events/overview/dev"><img src="https://www.codefactor.io/repository/github/garlic-team/@gcommands/events/badge/dev" alt="Code Raiting" /></a>
+    <a href="https://www.codefactor.io/repository/github/garlic-team/@gcommands/events/overview/dev"><img src="https://www.codefactor.io/repository/github/garlic-team/gcommands/badge/dev" alt="Code Raiting" /></a>
   <p>
     <a href="https://www.npmjs.com/package/gcommands"><img src="https://nodei.co/npm/gcommands.png?downloads=true&stars=true" alt="NPM Banner"></a>
   </p>
@@ -22,7 +22,9 @@ npm install @gcommands/events
 yarn add @gcommands/events
 pnpm add @gcommands/events
 ```
---
+
+---
+
 ```js
 const { GEvents } = require("@gcommands/events");
 const { Client } = require("discord.js");
