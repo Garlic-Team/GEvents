@@ -9,7 +9,7 @@
     "url": "git://github.com/garlic-team/gevents.git"
   },
   "author": "Garlic-Team",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Garlic-Team/GEvents/issues"
   },
