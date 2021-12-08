@@ -1,7 +1,6 @@
 import { EventOptions } from "../util/Constants";
-
-const { resolveString, isClass } = require('../util/util');
-const Color = require("./Color");
+import { Util } from '../util/util';
+import { Color } from "./Color";
 
 export class Event {
     client;
@@ -13,7 +12,7 @@ export class Event {
     constructor(client, options: EventOptions) {
         this.client = client;
 
-        this.name = resolveString(options.name);
+        this.name = Util.resolveString(options.name);
         this.once = Boolean(options.once) || false;
         this.ws = Boolean(options.ws) || false;
 
@@ -32,7 +31,7 @@ export class Event {
 
         let newEvent = await require(eventPath);
 
-        if (!isClass(newEvent)) return console.log(new Color('&d[GEvents] &cThe event must be class!').getText());
+        if (!Util.isClass(newEvent)) return console.log(new Color('&d[GEvents] &cThe event must be class!').getText());
         else newEvent = new newEvent(this.client);
 
         if (!(newEvent instanceof Event)) return console.log(new Color(`&d[GEvents] &cEvent ${newEvent.name} doesnt belong in Event.`).getText());

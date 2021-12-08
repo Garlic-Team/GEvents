@@ -1,15 +1,12 @@
-const { resolveString } = require('../util/util');
-
-interface ColorOptions {
-	json?: boolean;
-}
+import { ColorOptions } from '../util/Constants';
+import { Util } from '../util/util';
 
 export class Color {
 	text;
 	json;
 	constructor(text = '', options?: ColorOptions) {
 
-		this.text = resolveString(text);
+		this.text = Util.resolveString(text);
 		this.json = options.json;
 
         this.text = this.text

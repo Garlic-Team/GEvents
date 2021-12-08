@@ -12,3 +12,7 @@ export interface EventOptions {
     once?: boolean;
     ws?: boolean;
 }
+
+export interface ColorOptions {
+	json?: boolean;
+}

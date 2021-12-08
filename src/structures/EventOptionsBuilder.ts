@@ -1,6 +1,5 @@
 import { EventOptions } from "../util/Constants";
-
-const { resolveString } = require('../util/util');
+import { Util } from '../util/util';
 
 export class EventOptionsBuilder {
     name: string;
@@ -12,7 +11,7 @@ export class EventOptionsBuilder {
 
     setup(data) {
         
-        this.name = 'name' in data ? resolveString(data.name) : null;
+        this.name = 'name' in data ? Util.resolveString(data.name) : null;
         this.once = 'once' in data ? Boolean(data.value) : null;
         this.ws = 'ws' in data ? Boolean(data.ws) : null;
 
@@ -20,7 +19,7 @@ export class EventOptionsBuilder {
     }
 
     setName(name) {
-        this.name = resolveString(name);
+        this.name = Util.resolveString(name);
         return this;
     }
 
