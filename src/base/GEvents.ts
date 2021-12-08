@@ -6,7 +6,7 @@ import { Util } from '../util/util';
 import * as path from 'path';
 import { LoaderOptions, Events } from '../util/Constants'
 
-export class GEventLoader {
+export class GEvents {
     client;
     eventDir: string;
     constructor(client, options: LoaderOptions) {
