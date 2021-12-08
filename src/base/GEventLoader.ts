@@ -1,12 +1,12 @@
 import { Collection } from 'discord.js';
-import Color from '../structures/Color'
+import { Color } from '../structures/Color'
 import * as fs from "fs";
-import Event from '../structures/Event';
-import Util from '../util/util';
+import { Event } from '../structures/Event';
+import { Util } from '../util/util';
 import * as path from 'path';
 import { LoaderOptions, Events } from '../util/Constants'
 
-class GEventLoader {
+export class GEventLoader {
     client;
     eventDir: string;
     constructor(client, options: LoaderOptions) {
@@ -90,5 +90,3 @@ class GEventLoader {
         })
     }
 }
-
-export default GEventLoader;

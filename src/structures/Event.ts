@@ -7,7 +7,7 @@ interface EventOptions {
     ws?: boolean;
 }
 
-class Event {
+export class Event {
     client;
     name: string;
     once: boolean;
@@ -46,5 +46,3 @@ class Event {
         return true;
 	}
 }
-
-export default Event;

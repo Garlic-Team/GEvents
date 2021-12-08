@@ -4,7 +4,7 @@ interface ColorOptions {
 	json?: boolean;
 }
 
-class Color {
+export class Color {
 	text;
 	json;
 	constructor(text = '', options?: ColorOptions) {
@@ -49,5 +49,3 @@ class Color {
 		return `r: ${parseInt(get[1], 16)}, g: ${parseInt(get[2], 16)}, b: ${parseInt(get[3], 16)}`
 	}
 }
-
-export default Color;

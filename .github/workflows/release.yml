@@ -1,9 +1,6 @@
 name: "Release"
 
-on:
-  push:
-    branches:
-      - main
+on: [workflow_dispatch]
 
 jobs:
   release:
@@ -19,13 +16,10 @@ jobs:
           registry-url: https://registry.npmjs.org/
 
       - name: Install
-        run: npm install --save-dev @babel/cli @babel/core @babel/preset-env @babel/preset-typescript babel-plugin-add-module-exports typescript @types/node discord.js
+        run: npm install --save-dev @babel/cli @babel/core @babel/preset-env @babel/preset-typescript babel-plugin-add-module-exports typescript @types/node
 
       - name: build
-        run: node build.js
-      
-      - name: build declarations
-        run: npm run tscbuild
+        run: npm run build
 
       - name: publish
         run: npm publish --access public

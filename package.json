@@ -1,7 +1,7 @@
 {
   "name": "@gcommands/events",
-  "version": "2.0.8",
-  "description": "Event handler",
+  "version": "2.0.9",
+  "description": "Event handler for discord.js and gcommands",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "repository": {
@@ -9,22 +9,30 @@
     "url": "git://github.com/garlic-team/gevents.git"
   },
   "author": "Garlic-Team",
-  "license": "MIT",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/Garlic-Team/GEvents/issues"
   },
-  "homepage": "https://gcommands.js.org",
+  "homepage": "https://garlic-team.github.io/GEvents",
   "scripts": {
-    "tscbuild": "tsc --emitDeclarationOnly"
+    "build": "bash build.bash",
+    "babelbuild": "npx babel --extensions .ts ./src -d ./dist --minified",
+    "tscbuild": "tsc --emitDeclarationOnly",
+    "docs:build": "typedoc --json docs/out-main.json src/index.ts && node scripts/docs.mjs"
   },
   "devDependencies": {
-    "@babel/cli": "^7.15.7",
-    "@babel/core": "^7.15.8",
-    "@babel/preset-env": "^7.15.8",
-    "@babel/preset-typescript": "^7.15.0",
-    "@types/node": "^16.11.10",
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.4",
+    "@babel/preset-typescript": "^7.16.0",
+    "@discordjs/ts-docgen": "^0.3.4",
+    "@types/node": "^16.11.12",
+    "@typescript-eslint/eslint-plugin": "^5.6.0",
+    "@typescript-eslint/parser": "^5.6.0",
     "babel-cli": "^6.26.0",
     "babel-plugin-add-module-exports": "^1.0.4",
-    "typescript": "^4.4.3"
+    "eslint": "^8.4.1",
+    "glob": "^7.2.0",
+    "typescript": "^4.5.2"
   }
 }

@@ -1,6 +1,6 @@
 const { resolveString } = require('../util/util');
 
-class EventOptionsBuilder {
+export class EventOptionsBuilder {
     name: string;
     once: boolean;
     ws: boolean;
@@ -40,5 +40,3 @@ class EventOptionsBuilder {
         };
     }
 }
-
-export default EventOptionsBuilder;
