@@ -22,7 +22,7 @@
 					"sources": [
 						{
 							"fileName": "util/Constants.ts",
-							"line": 3,
+							"line": 4,
 							"character": 4
 						}
 					],
@@ -37,7 +37,7 @@
 					"sources": [
 						{
 							"fileName": "util/Constants.ts",
-							"line": 2,
+							"line": 3,
 							"character": 4
 						}
 					],
@@ -57,20 +57,20 @@
 			"sources": [
 				{
 					"fileName": "util/Constants.ts",
-					"line": 1,
+					"line": 2,
 					"character": 12
 				}
 			]
 		},
 		{
-			"id": 24,
+			"id": 26,
 			"name": "Event",
 			"kind": 128,
 			"kindString": "Class",
 			"flags": {},
 			"children": [
 				{
-					"id": 25,
+					"id": 27,
 					"name": "constructor",
 					"kind": 512,
 					"kindString": "Constructor",
@@ -84,14 +84,14 @@
 					],
 					"signatures": [
 						{
-							"id": 26,
+							"id": 28,
 							"name": "new Event",
 							"kind": 16384,
 							"kindString": "Constructor signature",
 							"flags": {},
 							"parameters": [
 								{
-									"id": 27,
+									"id": 29,
 									"name": "client",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -102,7 +102,7 @@
 									}
 								},
 								{
-									"id": 28,
+									"id": 30,
 									"name": "options",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -116,15 +116,51 @@
 							],
 							"type": {
 								"type": "reference",
-								"id": 24,
+								"id": 26,
 								"name": "Event"
 							}
 						}
 					]
 				},
 				{
-					"id": 29,
+					"id": 36,
+					"name": "_path",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "structures/Event.ts",
+							"line": 11,
+							"character": 4
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 31,
 					"name": "client",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "structures/Event.ts",
+							"line": 6,
+							"character": 4
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "any"
+					}
+				},
+				{
+					"id": 32,
+					"name": "name",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {},
@@ -137,12 +173,12 @@
 					],
 					"type": {
 						"type": "intrinsic",
-						"name": "any"
+						"name": "string"
 					}
 				},
 				{
-					"id": 30,
-					"name": "name",
+					"id": 33,
+					"name": "once",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {},
@@ -155,12 +191,30 @@
 					],
 					"type": {
 						"type": "intrinsic",
-						"name": "string"
+						"name": "boolean"
 					}
 				},
 				{
-					"id": 31,
-					"name": "once",
+					"id": 35,
+					"name": "options",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "structures/Event.ts",
+							"line": 10,
+							"character": 4
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "any"
+					}
+				},
+				{
+					"id": 34,
+					"name": "ws",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {},
@@ -177,43 +231,7 @@
 					}
 				},
 				{
-					"id": 33,
-					"name": "options",
-					"kind": 1024,
-					"kindString": "Property",
-					"flags": {},
-					"sources": [
-						{
-							"fileName": "structures/Event.ts",
-							"line": 11,
-							"character": 4
-						}
-					],
-					"type": {
-						"type": "intrinsic",
-						"name": "any"
-					}
-				},
-				{
-					"id": 32,
-					"name": "ws",
-					"kind": 1024,
-					"kindString": "Property",
-					"flags": {},
-					"sources": [
-						{
-							"fileName": "structures/Event.ts",
-							"line": 10,
-							"character": 4
-						}
-					],
-					"type": {
-						"type": "intrinsic",
-						"name": "boolean"
-					}
-				},
-				{
-					"id": 38,
+					"id": 41,
 					"name": "reload",
 					"kind": 2048,
 					"kindString": "Method",
@@ -221,13 +239,13 @@
 					"sources": [
 						{
 							"fileName": "structures/Event.ts",
-							"line": 27,
+							"line": 28,
 							"character": 10
 						}
 					],
 					"signatures": [
 						{
-							"id": 39,
+							"id": 42,
 							"name": "reload",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -255,7 +273,7 @@
 					]
 				},
 				{
-					"id": 34,
+					"id": 37,
 					"name": "run",
 					"kind": 2048,
 					"kindString": "Method",
@@ -263,20 +281,20 @@
 					"sources": [
 						{
 							"fileName": "structures/Event.ts",
-							"line": 23,
-							"character": 10
+							"line": 24,
+							"character": 4
 						}
 					],
 					"signatures": [
 						{
-							"id": 35,
+							"id": 38,
 							"name": "run",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
 							"parameters": [
 								{
-									"id": 36,
+									"id": 39,
 									"name": "client",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -287,7 +305,7 @@
 									}
 								},
 								{
-									"id": 37,
+									"id": 40,
 									"name": "args",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -304,14 +322,8 @@
 								}
 							],
 							"type": {
-								"type": "reference",
-								"typeArguments": [
-									{
-										"type": "intrinsic",
-										"name": "void"
-									}
-								],
-								"name": "Promise"
+								"type": "intrinsic",
+								"name": "void"
 							}
 						}
 					]
@@ -322,46 +334,47 @@
 					"title": "Constructors",
 					"kind": 512,
 					"children": [
-						25
+						27
 					]
 				},
 				{
 					"title": "Properties",
 					"kind": 1024,
 					"children": [
-						29,
-						30,
+						36,
 						31,
+						32,
 						33,
-						32
+						35,
+						34
 					]
 				},
 				{
 					"title": "Methods",
 					"kind": 2048,
 					"children": [
-						38,
-						34
+						41,
+						37
 					]
 				}
 			],
 			"sources": [
 				{
 					"fileName": "structures/Event.ts",
-					"line": 6,
+					"line": 5,
 					"character": 13
 				}
 			]
 		},
 		{
-			"id": 40,
+			"id": 43,
 			"name": "EventOptionsBuilder",
 			"kind": 128,
 			"kindString": "Class",
 			"flags": {},
 			"children": [
 				{
-					"id": 41,
+					"id": 44,
 					"name": "constructor",
 					"kind": 512,
 					"kindString": "Constructor",
@@ -369,20 +382,20 @@
 					"sources": [
 						{
 							"fileName": "structures/EventOptionsBuilder.ts",
-							"line": 9,
+							"line": 8,
 							"character": 4
 						}
 					],
 					"signatures": [
 						{
-							"id": 42,
+							"id": 45,
 							"name": "new EventOptionsBuilder",
 							"kind": 16384,
 							"kindString": "Constructor signature",
 							"flags": {},
 							"parameters": [
 								{
-									"id": 43,
+									"id": 46,
 									"name": "data",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -398,15 +411,33 @@
 							],
 							"type": {
 								"type": "reference",
-								"id": 40,
+								"id": 43,
 								"name": "EventOptionsBuilder"
 							}
 						}
 					]
 				},
 				{
-					"id": 44,
+					"id": 47,
 					"name": "name",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "structures/EventOptionsBuilder.ts",
+							"line": 5,
+							"character": 4
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 48,
+					"name": "once",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {},
@@ -419,12 +450,12 @@
 					],
 					"type": {
 						"type": "intrinsic",
-						"name": "string"
+						"name": "boolean"
 					}
 				},
 				{
-					"id": 45,
-					"name": "once",
+					"id": 49,
+					"name": "ws",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {},
@@ -441,25 +472,7 @@
 					}
 				},
 				{
-					"id": 46,
-					"name": "ws",
-					"kind": 1024,
-					"kindString": "Property",
-					"flags": {},
-					"sources": [
-						{
-							"fileName": "structures/EventOptionsBuilder.ts",
-							"line": 8,
-							"character": 4
-						}
-					],
-					"type": {
-						"type": "intrinsic",
-						"name": "boolean"
-					}
-				},
-				{
-					"id": 54,
+					"id": 57,
 					"name": "setName",
 					"kind": 2048,
 					"kindString": "Method",
@@ -467,20 +480,20 @@
 					"sources": [
 						{
 							"fileName": "structures/EventOptionsBuilder.ts",
-							"line": 22,
+							"line": 20,
 							"character": 4
 						}
 					],
 					"signatures": [
 						{
-							"id": 55,
+							"id": 58,
 							"name": "setName",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
 							"parameters": [
 								{
-									"id": 56,
+									"id": 59,
 									"name": "name",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -493,14 +506,14 @@
 							],
 							"type": {
 								"type": "reference",
-								"id": 40,
+								"id": 43,
 								"name": "EventOptionsBuilder"
 							}
 						}
 					]
 				},
 				{
-					"id": 57,
+					"id": 60,
 					"name": "setOnce",
 					"kind": 2048,
 					"kindString": "Method",
@@ -508,20 +521,20 @@
 					"sources": [
 						{
 							"fileName": "structures/EventOptionsBuilder.ts",
-							"line": 27,
+							"line": 25,
 							"character": 4
 						}
 					],
 					"signatures": [
 						{
-							"id": 58,
+							"id": 61,
 							"name": "setOnce",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
 							"parameters": [
 								{
-									"id": 59,
+									"id": 62,
 									"name": "once",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -534,14 +547,14 @@
 							],
 							"type": {
 								"type": "reference",
-								"id": 40,
+								"id": 43,
 								"name": "EventOptionsBuilder"
 							}
 						}
 					]
 				},
 				{
-					"id": 60,
+					"id": 63,
 					"name": "setWs",
 					"kind": 2048,
 					"kindString": "Method",
@@ -549,20 +562,20 @@
 					"sources": [
 						{
 							"fileName": "structures/EventOptionsBuilder.ts",
-							"line": 32,
+							"line": 30,
 							"character": 4
 						}
 					],
 					"signatures": [
 						{
-							"id": 61,
+							"id": 64,
 							"name": "setWs",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
 							"parameters": [
 								{
-									"id": 62,
+									"id": 65,
 									"name": "ws",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -575,14 +588,14 @@
 							],
 							"type": {
 								"type": "reference",
-								"id": 40,
+								"id": 43,
 								"name": "EventOptionsBuilder"
 							}
 						}
 					]
 				},
 				{
-					"id": 47,
+					"id": 50,
 					"name": "setup",
 					"kind": 2048,
 					"kindString": "Method",
@@ -590,20 +603,20 @@
 					"sources": [
 						{
 							"fileName": "structures/EventOptionsBuilder.ts",
-							"line": 13,
+							"line": 12,
 							"character": 4
 						}
 					],
 					"signatures": [
 						{
-							"id": 48,
+							"id": 51,
 							"name": "setup",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
 							"parameters": [
 								{
-									"id": 49,
+									"id": 52,
 									"name": "data",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -617,14 +630,14 @@
 							"type": {
 								"type": "reflection",
 								"declaration": {
-									"id": 50,
+									"id": 53,
 									"name": "__type",
 									"kind": 65536,
 									"kindString": "Type literal",
 									"flags": {},
 									"children": [
 										{
-											"id": 51,
+											"id": 54,
 											"name": "name",
 											"kind": 1024,
 											"kindString": "Property",
@@ -636,7 +649,7 @@
 											"defaultValue": "..."
 										},
 										{
-											"id": 52,
+											"id": 55,
 											"name": "once",
 											"kind": 1024,
 											"kindString": "Property",
@@ -648,7 +661,7 @@
 											"defaultValue": "..."
 										},
 										{
-											"id": 53,
+											"id": 56,
 											"name": "ws",
 											"kind": 1024,
 											"kindString": "Property",
@@ -665,9 +678,9 @@
 											"title": "Properties",
 											"kind": 1024,
 											"children": [
-												51,
-												52,
-												53
+												54,
+												55,
+												56
 											]
 										}
 									]
@@ -677,7 +690,7 @@
 					]
 				},
 				{
-					"id": 63,
+					"id": 66,
 					"name": "toJSON",
 					"kind": 2048,
 					"kindString": "Method",
@@ -685,13 +698,13 @@
 					"sources": [
 						{
 							"fileName": "structures/EventOptionsBuilder.ts",
-							"line": 37,
+							"line": 35,
 							"character": 4
 						}
 					],
 					"signatures": [
 						{
-							"id": 64,
+							"id": 67,
 							"name": "toJSON",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -699,14 +712,14 @@
 							"type": {
 								"type": "reflection",
 								"declaration": {
-									"id": 65,
+									"id": 68,
 									"name": "__type",
 									"kind": 65536,
 									"kindString": "Type literal",
 									"flags": {},
 									"children": [
 										{
-											"id": 66,
+											"id": 69,
 											"name": "name",
 											"kind": 1024,
 											"kindString": "Property",
@@ -718,7 +731,7 @@
 											"defaultValue": "..."
 										},
 										{
-											"id": 67,
+											"id": 70,
 											"name": "once",
 											"kind": 1024,
 											"kindString": "Property",
@@ -730,7 +743,7 @@
 											"defaultValue": "..."
 										},
 										{
-											"id": 68,
+											"id": 71,
 											"name": "ws",
 											"kind": 1024,
 											"kindString": "Property",
@@ -747,9 +760,9 @@
 											"title": "Properties",
 											"kind": 1024,
 											"children": [
-												66,
-												67,
-												68
+												69,
+												70,
+												71
 											]
 										}
 									]
@@ -764,47 +777,47 @@
 					"title": "Constructors",
 					"kind": 512,
 					"children": [
-						41
+						44
 					]
 				},
 				{
 					"title": "Properties",
 					"kind": 1024,
 					"children": [
-						44,
-						45,
-						46
+						47,
+						48,
+						49
 					]
 				},
 				{
 					"title": "Methods",
 					"kind": 2048,
 					"children": [
-						54,
 						57,
 						60,
-						47,
-						63
+						63,
+						50,
+						66
 					]
 				}
 			],
 			"sources": [
 				{
 					"fileName": "structures/EventOptionsBuilder.ts",
-					"line": 5,
+					"line": 4,
 					"character": 13
 				}
 			]
 		},
 		{
-			"id": 10,
+			"id": 12,
 			"name": "GEvents",
 			"kind": 128,
 			"kindString": "Class",
 			"flags": {},
 			"children": [
 				{
-					"id": 11,
+					"id": 13,
 					"name": "constructor",
 					"kind": 512,
 					"kindString": "Constructor",
@@ -818,14 +831,14 @@
 					],
 					"signatures": [
 						{
-							"id": 12,
+							"id": 14,
 							"name": "new GEvents",
 							"kind": 16384,
 							"kindString": "Constructor signature",
 							"flags": {},
 							"parameters": [
 								{
-									"id": 13,
+									"id": 15,
 									"name": "client",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -836,7 +849,7 @@
 									}
 								},
 								{
-									"id": 14,
+									"id": 16,
 									"name": "options",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -850,14 +863,14 @@
 							],
 							"type": {
 								"type": "reference",
-								"id": 10,
+								"id": 12,
 								"name": "GEvents"
 							}
 						}
 					]
 				},
 				{
-					"id": 15,
+					"id": 17,
 					"name": "client",
 					"kind": 1024,
 					"kindString": "Property",
@@ -875,7 +888,7 @@
 					}
 				},
 				{
-					"id": 16,
+					"id": 18,
 					"name": "eventDir",
 					"kind": 1024,
 					"kindString": "Property",
@@ -893,7 +906,7 @@
 					}
 				},
 				{
-					"id": 19,
+					"id": 21,
 					"name": "__loadEventCategoryFiles",
 					"kind": 2048,
 					"kindString": "Method",
@@ -907,14 +920,14 @@
 					],
 					"signatures": [
 						{
-							"id": 20,
+							"id": 22,
 							"name": "__loadEventCategoryFiles",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
 							"parameters": [
 								{
-									"id": 21,
+									"id": 23,
 									"name": "categoryFolder",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -939,7 +952,7 @@
 					]
 				},
 				{
-					"id": 17,
+					"id": 19,
 					"name": "__loadEventFiles",
 					"kind": 2048,
 					"kindString": "Method",
@@ -953,7 +966,7 @@
 					],
 					"signatures": [
 						{
-							"id": 18,
+							"id": 20,
 							"name": "__loadEventFiles",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -972,7 +985,7 @@
 					]
 				},
 				{
-					"id": 22,
+					"id": 24,
 					"name": "__loadEvents",
 					"kind": 2048,
 					"kindString": "Method",
@@ -981,25 +994,19 @@
 						{
 							"fileName": "base/GEvents.ts",
 							"line": 79,
-							"character": 10
+							"character": 4
 						}
 					],
 					"signatures": [
 						{
-							"id": 23,
+							"id": 25,
 							"name": "__loadEvents",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
 							"type": {
-								"type": "reference",
-								"typeArguments": [
-									{
-										"type": "intrinsic",
-										"name": "void"
-									}
-								],
-								"name": "Promise"
+								"type": "intrinsic",
+								"name": "void"
 							}
 						}
 					]
@@ -1010,24 +1017,24 @@
 					"title": "Constructors",
 					"kind": 512,
 					"children": [
-						11
+						13
 					]
 				},
 				{
 					"title": "Properties",
 					"kind": 1024,
 					"children": [
-						15,
-						16
+						17,
+						18
 					]
 				},
 				{
 					"title": "Methods",
 					"kind": 2048,
 					"children": [
+						21,
 						19,
-						17,
-						22
+						24
 					]
 				}
 			],
@@ -1036,6 +1043,51 @@
 					"fileName": "base/GEvents.ts",
 					"line": 9,
 					"character": 13
+				}
+			]
+		},
+		{
+			"id": 10,
+			"name": "ColorOptions",
+			"kind": 256,
+			"kindString": "Interface",
+			"flags": {},
+			"children": [
+				{
+					"id": 11,
+					"name": "json",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isOptional": true
+					},
+					"sources": [
+						{
+							"fileName": "util/Constants.ts",
+							"line": 18,
+							"character": 1
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "boolean"
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"kind": 1024,
+					"children": [
+						11
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "util/Constants.ts",
+					"line": 17,
+					"character": 17
 				}
 			]
 		},
@@ -1055,7 +1107,7 @@
 					"sources": [
 						{
 							"fileName": "util/Constants.ts",
-							"line": 11,
+							"line": 12,
 							"character": 4
 						}
 					],
@@ -1075,7 +1127,7 @@
 					"sources": [
 						{
 							"fileName": "util/Constants.ts",
-							"line": 12,
+							"line": 13,
 							"character": 4
 						}
 					],
@@ -1095,7 +1147,7 @@
 					"sources": [
 						{
 							"fileName": "util/Constants.ts",
-							"line": 13,
+							"line": 14,
 							"character": 4
 						}
 					],
@@ -1119,7 +1171,7 @@
 			"sources": [
 				{
 					"fileName": "util/Constants.ts",
-					"line": 10,
+					"line": 11,
 					"character": 17
 				}
 			]
@@ -1140,7 +1192,7 @@
 					"sources": [
 						{
 							"fileName": "util/Constants.ts",
-							"line": 7,
+							"line": 8,
 							"character": 4
 						}
 					],
@@ -1162,7 +1214,7 @@
 			"sources": [
 				{
 					"fileName": "util/Constants.ts",
-					"line": 6,
+					"line": 7,
 					"character": 17
 				}
 			]
@@ -1180,15 +1232,16 @@
 			"title": "Classes",
 			"kind": 128,
 			"children": [
-				24,
-				40,
-				10
+				26,
+				43,
+				12
 			]
 		},
 		{
 			"title": "Interfaces",
 			"kind": 256,
 			"children": [
+				10,
 				4,
 				8
 			]
