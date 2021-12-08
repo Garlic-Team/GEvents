@@ -1,6 +1,6 @@
-import { EventOptions } from "../util/Constants";
+import { EventOptions } from '../util/Constants';
 import { Util } from '../util/util';
-import { Color } from "./Color";
+import { Color } from './Color';
 
 export class Event {
     client;
@@ -8,6 +8,7 @@ export class Event {
     once: boolean;
     ws: boolean;
     options;
+    _path: string;
 
     constructor(client, options: EventOptions) {
         this.client = client;
@@ -19,12 +20,13 @@ export class Event {
         this.options = options;
     }
 
-    async run(client, ...args) {
-        return console.log(new Color(`&d[GEvents] &cEvent ${this.name} doesn't provide a run method!`).getText())
+    /* eslint-disable  @typescript-eslint/no-unused-vars, no-unused-vars */
+    run(client, ...args) {
+        return console.log(new Color(`&d[GEvents] &cEvent ${this.name} doesn't provide a run method!`).getText());
     }
 
     async reload() {
-        let eventPath = this.client.gevents.get(this.name)._path;
+        const eventPath = this.client.gevents.get(this.name)._path;
 
         delete require.cache[require.resolve(eventPath)];
         this.client.gevents.delete(this.name);
@@ -36,7 +38,7 @@ export class Event {
 
         if (!(newEvent instanceof Event)) return console.log(new Color(`&d[GEvents] &cEvent ${newEvent.name} doesnt belong in Event.`).getText());
 
-        newEvent['_path'] = eventPath;
+        newEvent._path = eventPath;
         this.client.gevents.set(newEvent.name, newEvent);
         return true;
 	}

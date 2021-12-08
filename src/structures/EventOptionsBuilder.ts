@@ -1,4 +1,4 @@
-import { EventOptions } from "../util/Constants";
+import { EventOptions } from '../util/Constants';
 import { Util } from '../util/util';
 
 export class EventOptionsBuilder {
@@ -10,7 +10,6 @@ export class EventOptionsBuilder {
     }
 
     setup(data) {
-        
         this.name = 'name' in data ? Util.resolveString(data.name) : null;
         this.once = 'once' in data ? Boolean(data.value) : null;
         this.ws = 'ws' in data ? Boolean(data.ws) : null;

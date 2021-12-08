@@ -1,6 +1,7 @@
+/* eslint-disable no-shadow, no-unused-vars */
 export enum Events {
     LOG = 'log',
-    DEBUG = 'debug'
+    DEBUG = 'debug',
 }
 
 export interface LoaderOptions {

@@ -5,7 +5,6 @@ export class Color {
 	text;
 	json;
 	constructor(text = '', options?: ColorOptions) {
-
 		this.text = Util.resolveString(text);
 		this.json = options.json;
 
@@ -22,27 +21,27 @@ export class Color {
 			// OTHER
 			.replace(/&r/g, '\x1b[0m')
 			.replace(/&n/g, '\x1b[4m')
-			.replace(/&p/g, '\x1b[7m')
+			.replace(/&p/g, '\x1b[7m');
 	}
 
 	getText() {
-		if(this.json) {
-			return {text:this.text + '\x1b[0m'}
+		if (this.json) {
+			return { text: `${this.text}\x1b[0m` };
 		}
-		return this.text + '\x1b[0m';
+		return `${this.text}\x1b[0m`;
 	}
 
 	getRGB() {
-		let get = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(this.text);
+		const get = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(this.text);
 
-		if(this.json) {
+		if (this.json) {
 			return {
 				r: parseInt(get[1], 16),
 				g: parseInt(get[2], 16),
-				b: parseInt(get[3], 16)
+				b: parseInt(get[3], 16),
 			};
 		}
 
-		return `r: ${parseInt(get[1], 16)}, g: ${parseInt(get[2], 16)}, b: ${parseInt(get[3], 16)}`
+		return `r: ${parseInt(get[1], 16)}, g: ${parseInt(get[2], 16)}, b: ${parseInt(get[3], 16)}`;
 	}
 }
