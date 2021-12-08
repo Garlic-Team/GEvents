@@ -1,0 +1,1070 @@
+{
+	"id": 0,
+	"name": "@gcommands/events",
+	"kind": 1,
+	"kindString": "Project",
+	"flags": {},
+	"originalName": "",
+	"children": [
+		{
+			"id": 1,
+			"name": "Events",
+			"kind": 8,
+			"kindString": "Enumeration",
+			"flags": {},
+			"children": [
+				{
+					"id": 3,
+					"name": "DEBUG",
+					"kind": 16,
+					"kindString": "Enumeration member",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "util/Constants.ts",
+							"line": 3,
+							"character": 4
+						}
+					],
+					"defaultValue": "\"debug\""
+				},
+				{
+					"id": 2,
+					"name": "LOG",
+					"kind": 16,
+					"kindString": "Enumeration member",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "util/Constants.ts",
+							"line": 2,
+							"character": 4
+						}
+					],
+					"defaultValue": "\"log\""
+				}
+			],
+			"groups": [
+				{
+					"title": "Enumeration members",
+					"kind": 16,
+					"children": [
+						3,
+						2
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "util/Constants.ts",
+					"line": 1,
+					"character": 12
+				}
+			]
+		},
+		{
+			"id": 18,
+			"name": "Event",
+			"kind": 128,
+			"kindString": "Class",
+			"flags": {},
+			"children": [
+				{
+					"id": 19,
+					"name": "constructor",
+					"kind": 512,
+					"kindString": "Constructor",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "structures/Event.ts",
+							"line": 17,
+							"character": 4
+						}
+					],
+					"signatures": [
+						{
+							"id": 20,
+							"name": "new Event",
+							"kind": 16384,
+							"kindString": "Constructor signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 21,
+									"name": "client",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "any"
+									}
+								},
+								{
+									"id": 22,
+									"name": "options",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "EventOptions"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 18,
+								"name": "Event"
+							}
+						}
+					]
+				},
+				{
+					"id": 23,
+					"name": "client",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "structures/Event.ts",
+							"line": 11,
+							"character": 4
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "any"
+					}
+				},
+				{
+					"id": 24,
+					"name": "name",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "structures/Event.ts",
+							"line": 12,
+							"character": 4
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 25,
+					"name": "once",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "structures/Event.ts",
+							"line": 13,
+							"character": 4
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "boolean"
+					}
+				},
+				{
+					"id": 27,
+					"name": "options",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "structures/Event.ts",
+							"line": 15,
+							"character": 4
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "any"
+					}
+				},
+				{
+					"id": 26,
+					"name": "ws",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "structures/Event.ts",
+							"line": 14,
+							"character": 4
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "boolean"
+					}
+				},
+				{
+					"id": 32,
+					"name": "reload",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "structures/Event.ts",
+							"line": 31,
+							"character": 10
+						}
+					],
+					"signatures": [
+						{
+							"id": 33,
+							"name": "reload",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"type": {
+								"type": "reference",
+								"typeArguments": [
+									{
+										"type": "union",
+										"types": [
+											{
+												"type": "literal",
+												"value": true
+											},
+											{
+												"type": "intrinsic",
+												"name": "void"
+											}
+										]
+									}
+								],
+								"name": "Promise"
+							}
+						}
+					]
+				},
+				{
+					"id": 28,
+					"name": "run",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "structures/Event.ts",
+							"line": 27,
+							"character": 10
+						}
+					],
+					"signatures": [
+						{
+							"id": 29,
+							"name": "run",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 30,
+									"name": "client",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "any"
+									}
+								},
+								{
+									"id": 31,
+									"name": "args",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isRest": true
+									},
+									"type": {
+										"type": "array",
+										"elementType": {
+											"type": "intrinsic",
+											"name": "any"
+										}
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"typeArguments": [
+									{
+										"type": "intrinsic",
+										"name": "void"
+									}
+								],
+								"name": "Promise"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Constructors",
+					"kind": 512,
+					"children": [
+						19
+					]
+				},
+				{
+					"title": "Properties",
+					"kind": 1024,
+					"children": [
+						23,
+						24,
+						25,
+						27,
+						26
+					]
+				},
+				{
+					"title": "Methods",
+					"kind": 2048,
+					"children": [
+						32,
+						28
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "structures/Event.ts",
+					"line": 10,
+					"character": 13
+				}
+			]
+		},
+		{
+			"id": 34,
+			"name": "EventOptionsBuilder",
+			"kind": 128,
+			"kindString": "Class",
+			"flags": {},
+			"children": [
+				{
+					"id": 35,
+					"name": "constructor",
+					"kind": 512,
+					"kindString": "Constructor",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "structures/EventOptionsBuilder.ts",
+							"line": 7,
+							"character": 4
+						}
+					],
+					"signatures": [
+						{
+							"id": 36,
+							"name": "new EventOptionsBuilder",
+							"kind": 16384,
+							"kindString": "Constructor signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 37,
+									"name": "data",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reflection",
+										"declaration": {
+											"id": 38,
+											"name": "__type",
+											"kind": 65536,
+											"kindString": "Type literal",
+											"flags": {}
+										}
+									},
+									"defaultValue": "{}"
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 34,
+								"name": "EventOptionsBuilder"
+							}
+						}
+					]
+				},
+				{
+					"id": 39,
+					"name": "name",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "structures/EventOptionsBuilder.ts",
+							"line": 4,
+							"character": 4
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 40,
+					"name": "once",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "structures/EventOptionsBuilder.ts",
+							"line": 5,
+							"character": 4
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "boolean"
+					}
+				},
+				{
+					"id": 41,
+					"name": "ws",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "structures/EventOptionsBuilder.ts",
+							"line": 6,
+							"character": 4
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "boolean"
+					}
+				},
+				{
+					"id": 49,
+					"name": "setName",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "structures/EventOptionsBuilder.ts",
+							"line": 20,
+							"character": 4
+						}
+					],
+					"signatures": [
+						{
+							"id": 50,
+							"name": "setName",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 51,
+									"name": "name",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "any"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 34,
+								"name": "EventOptionsBuilder"
+							}
+						}
+					]
+				},
+				{
+					"id": 52,
+					"name": "setOnce",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "structures/EventOptionsBuilder.ts",
+							"line": 25,
+							"character": 4
+						}
+					],
+					"signatures": [
+						{
+							"id": 53,
+							"name": "setOnce",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 54,
+									"name": "once",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "any"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 34,
+								"name": "EventOptionsBuilder"
+							}
+						}
+					]
+				},
+				{
+					"id": 55,
+					"name": "setWs",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "structures/EventOptionsBuilder.ts",
+							"line": 30,
+							"character": 4
+						}
+					],
+					"signatures": [
+						{
+							"id": 56,
+							"name": "setWs",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 57,
+									"name": "ws",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "any"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 34,
+								"name": "EventOptionsBuilder"
+							}
+						}
+					]
+				},
+				{
+					"id": 42,
+					"name": "setup",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "structures/EventOptionsBuilder.ts",
+							"line": 11,
+							"character": 4
+						}
+					],
+					"signatures": [
+						{
+							"id": 43,
+							"name": "setup",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 44,
+									"name": "data",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "any"
+									}
+								}
+							],
+							"type": {
+								"type": "reflection",
+								"declaration": {
+									"id": 45,
+									"name": "__type",
+									"kind": 65536,
+									"kindString": "Type literal",
+									"flags": {},
+									"children": [
+										{
+											"id": 46,
+											"name": "name",
+											"kind": 1024,
+											"kindString": "Property",
+											"flags": {},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 47,
+											"name": "once",
+											"kind": 1024,
+											"kindString": "Property",
+											"flags": {},
+											"type": {
+												"type": "intrinsic",
+												"name": "boolean"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 48,
+											"name": "ws",
+											"kind": 1024,
+											"kindString": "Property",
+											"flags": {},
+											"type": {
+												"type": "intrinsic",
+												"name": "boolean"
+											},
+											"defaultValue": "..."
+										}
+									],
+									"groups": [
+										{
+											"title": "Properties",
+											"kind": 1024,
+											"children": [
+												46,
+												47,
+												48
+											]
+										}
+									]
+								}
+							}
+						}
+					]
+				},
+				{
+					"id": 58,
+					"name": "toJSON",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "structures/EventOptionsBuilder.ts",
+							"line": 35,
+							"character": 4
+						}
+					],
+					"signatures": [
+						{
+							"id": 59,
+							"name": "toJSON",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"type": {
+								"type": "reflection",
+								"declaration": {
+									"id": 60,
+									"name": "__type",
+									"kind": 65536,
+									"kindString": "Type literal",
+									"flags": {},
+									"children": [
+										{
+											"id": 61,
+											"name": "name",
+											"kind": 1024,
+											"kindString": "Property",
+											"flags": {},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 62,
+											"name": "once",
+											"kind": 1024,
+											"kindString": "Property",
+											"flags": {},
+											"type": {
+												"type": "intrinsic",
+												"name": "boolean"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 63,
+											"name": "ws",
+											"kind": 1024,
+											"kindString": "Property",
+											"flags": {},
+											"type": {
+												"type": "intrinsic",
+												"name": "boolean"
+											},
+											"defaultValue": "..."
+										}
+									],
+									"groups": [
+										{
+											"title": "Properties",
+											"kind": 1024,
+											"children": [
+												61,
+												62,
+												63
+											]
+										}
+									]
+								}
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Constructors",
+					"kind": 512,
+					"children": [
+						35
+					]
+				},
+				{
+					"title": "Properties",
+					"kind": 1024,
+					"children": [
+						39,
+						40,
+						41
+					]
+				},
+				{
+					"title": "Methods",
+					"kind": 2048,
+					"children": [
+						49,
+						52,
+						55,
+						42,
+						58
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "structures/EventOptionsBuilder.ts",
+					"line": 3,
+					"character": 13
+				}
+			]
+		},
+		{
+			"id": 4,
+			"name": "GEventLoader",
+			"kind": 128,
+			"kindString": "Class",
+			"flags": {},
+			"children": [
+				{
+					"id": 5,
+					"name": "constructor",
+					"kind": 512,
+					"kindString": "Constructor",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "base/GEventLoader.ts",
+							"line": 12,
+							"character": 4
+						}
+					],
+					"signatures": [
+						{
+							"id": 6,
+							"name": "new GEventLoader",
+							"kind": 16384,
+							"kindString": "Constructor signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 7,
+									"name": "client",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "any"
+									}
+								},
+								{
+									"id": 8,
+									"name": "options",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "LoaderOptions"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 4,
+								"name": "GEventLoader"
+							}
+						}
+					]
+				},
+				{
+					"id": 9,
+					"name": "client",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "base/GEventLoader.ts",
+							"line": 10,
+							"character": 4
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "any"
+					}
+				},
+				{
+					"id": 10,
+					"name": "eventDir",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "base/GEventLoader.ts",
+							"line": 11,
+							"character": 4
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 13,
+					"name": "__loadEventCategoryFiles",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "base/GEventLoader.ts",
+							"line": 54,
+							"character": 10
+						}
+					],
+					"signatures": [
+						{
+							"id": 14,
+							"name": "__loadEventCategoryFiles",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 15,
+									"name": "categoryFolder",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "any"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"typeArguments": [
+									{
+										"type": "intrinsic",
+										"name": "void"
+									}
+								],
+								"name": "Promise"
+							}
+						}
+					]
+				},
+				{
+					"id": 11,
+					"name": "__loadEventFiles",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "base/GEventLoader.ts",
+							"line": 27,
+							"character": 10
+						}
+					],
+					"signatures": [
+						{
+							"id": 12,
+							"name": "__loadEventFiles",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"type": {
+								"type": "reference",
+								"typeArguments": [
+									{
+										"type": "intrinsic",
+										"name": "void"
+									}
+								],
+								"name": "Promise"
+							}
+						}
+					]
+				},
+				{
+					"id": 16,
+					"name": "__loadEvents",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "base/GEventLoader.ts",
+							"line": 79,
+							"character": 10
+						}
+					],
+					"signatures": [
+						{
+							"id": 17,
+							"name": "__loadEvents",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"type": {
+								"type": "reference",
+								"typeArguments": [
+									{
+										"type": "intrinsic",
+										"name": "void"
+									}
+								],
+								"name": "Promise"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Constructors",
+					"kind": 512,
+					"children": [
+						5
+					]
+				},
+				{
+					"title": "Properties",
+					"kind": 1024,
+					"children": [
+						9,
+						10
+					]
+				},
+				{
+					"title": "Methods",
+					"kind": 2048,
+					"children": [
+						13,
+						11,
+						16
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "base/GEventLoader.ts",
+					"line": 9,
+					"character": 13
+				}
+			]
+		}
+	],
+	"groups": [
+		{
+			"title": "Enumerations",
+			"kind": 8,
+			"children": [
+				1
+			]
+		},
+		{
+			"title": "Classes",
+			"kind": 128,
+			"children": [
+				18,
+				34,
+				4
+			]
+		}
+	],
+	"sources": [
+		{
+			"fileName": "index.ts",
+			"line": 1,
+			"character": 0
+		}
+	]
+}
