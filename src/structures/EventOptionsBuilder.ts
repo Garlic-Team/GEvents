@@ -1,10 +1,12 @@
+import { EventOptions } from "../util/Constants";
+
 const { resolveString } = require('../util/util');
 
 export class EventOptionsBuilder {
     name: string;
     once: boolean;
     ws: boolean;
-    constructor(data = {}) {
+    constructor(data?: EventOptions) {
         this.setup(data);
     }
 

@@ -1,11 +1,7 @@
+import { EventOptions } from "../util/Constants";
+
 const { resolveString, isClass } = require('../util/util');
 const Color = require("./Color");
-
-interface EventOptions {
-    name: string;
-    once?: boolean;
-    ws?: boolean;
-}
 
 export class Event {
     client;

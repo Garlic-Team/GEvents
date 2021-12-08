@@ -6,3 +6,9 @@ export enum Events {
 export interface LoaderOptions {
     eventDir: string
 }
+
+export interface EventOptions {
+    name: string;
+    once?: boolean;
+    ws?: boolean;
+}
